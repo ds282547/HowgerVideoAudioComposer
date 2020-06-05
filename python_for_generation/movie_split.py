@@ -6,7 +6,7 @@ import time
 
 timestr = time.strftime("%Y%m%d_%H%M%S")
 
-inp = '這我都清楚但我沒有辦法改變'
+inp = '還是不愛認錯脾氣是硬了點這我都清楚但我沒有辦法改變'
 movie_source = "video.mp4"
 output_filename = "result_"+timestr
 postfix = ".mp4"
@@ -59,7 +59,7 @@ fullClip = VideoFileClip(movie_source)
 for (orig, spell, tone) in inputs:
     (sp, ep) = tp[spell][tone-1]
 
-    fullClip.subclip(sp, ep).res.write_videofile(output_filename+"_"+orig+postfix)
+    fullClip.subclip(sp, ep).write_videofile(output_filename+"_"+orig+postfix)
     print(orig, sp, ep)
 
 
